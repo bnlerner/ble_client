@@ -12,7 +12,7 @@ class NotificationDelegate(DefaultDelegate):
 def main():
     print("hello world!")
     
-    p = Peripheral("UUID", "public")
+    p = Peripheral("ee:6c:c1:cf:fe:f9", "public") # "random"
 
     p.setDelegate( NotificationDelegate() )
 
