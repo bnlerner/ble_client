@@ -22,11 +22,11 @@ def main():
     #ch_notify = svc.getCharacteristics()[1]
     p.writeCharacteristic(ch.valHandle + 1, "\x01\x00", withResponse=True)
 
-while True:
-    if p.waitForNotifications(1.0):
-        # handleNotification() was called
-        print("got notification")
-        continue
+    while True:
+        if p.waitForNotifications(1.0):
+            # handleNotification() was called
+            print("got notification")
+            continue
 
-    print("Waiting...")
-    # Perhaps do something else here
+        print("Waiting...")
+        # Perhaps do something else here
