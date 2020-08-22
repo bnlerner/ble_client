@@ -5,5 +5,11 @@ setup(
     description="client for ble peripheral services on video ml device", 
     scripts=["bin/run_ble_client.py"], 
     version="0.0.1", 
-    packages=["ble_client"]
+    license="MIT",
+    url="https://github.com/bnlerner/ble_client",
+    packages=["ble_client"],
+    requires=[],
+    extras_require={
+        "pybleno": ["pybleno"]
+    }
     )
