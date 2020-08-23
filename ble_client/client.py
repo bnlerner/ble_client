@@ -1,7 +1,8 @@
 from pybleno import *
 import sys
 import signal
-from utilities import *
+from ble_client.utilities import *
+import time
 
 print('bleno - echo')
 
@@ -31,7 +32,7 @@ def main():
     bleno.on('stateChange', onStateChange)
     bleno.on('advertisingStart', onAdvertisingStart)
     bleno.start()
-
+    time.sleep(100)    
 
     bleno.stopAdvertising()
     bleno.disconnect()
